@@ -205,10 +205,8 @@ class Reaction:
         Yields
         --------
         Union[:class:`User`, :class:`Member`]
-            The member (if retrievable) or the user that has reacted
-            to this message. The case where it can be a :class:`Member` is
-            in a guild message context. Sometimes it can be a :class:`User`
-            if the member has left the guild.
+            Bot reactions will return a :class:`Member`, while most other reaction will return a :class:`User`.
+            This changed with the message content restrictions.
         """
 
         if not isinstance(self.emoji, str):
